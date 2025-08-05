@@ -643,9 +643,112 @@ print("수수료 {}원이며, 잔액은 {}원입니다.".format(commission, bala
 
 # std_weight(height, gender)
 
+# import sys
+# print("Python", "Java", file=sys.stdout) #표준 출력
+# print("Python", "Java", file=sys.stderr) #표준 오류
 
+# 시험 성적
+# scores={"수학":0, "영어":50, "코딩":100}
+# for subject, score in scores.items():
+#     #print(subject, score)
+#     print(subject.ljust(8), str(score).rjust(4), sep=":")
 
+# 은행 대기순번표
+# 001, 002, 003 ...
+# for num in range(1,21):
+#     print("대기번호: " + str(num).zfill(3))
 
+# answer=input("아무 값이나 입력하세요: ") # 문자열 형태로 변수에 저장한다
+# print(type(answer))
+# print("입력하신 값은 " + answer + "입니다.")
+'''
+# 빈 자리는 빈공간으로 두고, 오른쪽 정렬을 하되, 총 10자리 공간을 확보
+print("{0:>10}".format(500)) # 출력:        500
+# 양수일 때 +로 표시, 음수일 때 -로 표시
+print("{0:>+10}".format(500)) # 출력:       +500
+print("{0:>+10}".format(-500)) # 출력:       -500
+# 왼쪽 정렬하고, 빈칸으로 _로 채움
+print("{0:_<+10}".format(500)) # 출력: +500______
+
+# 3자리마다 콤마를 찍어주기
+print("{0:,}".format(100000000000)) # 출력: 100,000,000,000
+# 3자리마다 콤마를 찍어주기, +,- 부호도 붙이기
+print("{0:+,}".format(100000000000)) # 출력: +100,000,000,000
+print("{0:,}".format(-100000000000)) # 출력: -100,000,000,000
+# 3자리마다 콤마를 찍어주기, 부호도 붙이고, 자릿수 확보하기
+# 돈이 많으면 행복하니깐 빈 자리는 ^^로 채워주기
+print("{0:^<+30,}".format(100000000000000))
+# 소수점 출력, 둘째 자리까지 출력
+print("{0:.2f}".format(5/3))
+'''
+
+# score_file=open("score.txt", "w", encoding="utf8") # w: write 쓰기 전용
+# print("수학: 0", file=score_file)
+# print("영어: 50", file=score_file)
+# score_file.close()
+
+# score_file=open("score.txt", "a", encoding="utf8") # a: append 끝에 추가하기
+# score_file.write("과학: 80")
+# score_file.write("\n코딩: 100")
+# score_file.close()
+
+# score_file=open("score.txt", "r", encoding="utf8") # r: read, 읽기 전용
+# print(score_file.read())
+# score_file.close()
+      
+# score_file=open("score.txt", "r", encoding="utf8") # r: read, 읽기 전용
+# print(score_file.readline(), end="") # 한 줄만 읽어오고, 커서는 다음 줄로
+# print(score_file.readline()) # 한 줄만 읽어오고, 커서는 다음 줄로
+# print(score_file.readline()) # 한 줄만 읽어오고, 커서는 다음 줄로
+# print(score_file.readline()) # 한 줄만 읽어오고, 커서는 다음 줄로
+# score_file.close()
+
+# score_file=open("score.txt", "r", encoding="utf8")
+# while True:
+#     line=score_file.readline()
+#     if not line:
+#         break
+#     print(line, end="")
+# score_file.close()
+
+# score_file=open("score.txt", "r", encoding="utf8")
+# lines=score_file.readlines() #list 형태로 저장
+# for line in lines:
+#     print(line, end="")
+# score_file.close()
+
+# 피클
+# import pickle
+# # profile_file=open("profile.pickle", "wb") # wb: 바이너리, 피클을 쓰기 위해서는 항상 바이너리를 설정해줘야한다
+# # profile={"이름":"박명수", "나이":30, "취미":["축구", "골프", "코딩"]}
+# # print(profile)
+# # pickle.dump(profile, profile_file) # profile에 있는 정보를 file에 저장
+# # profile_file.close()
+
+# profile_file=open("profile.pickle", "rb") # rb: 바이너리, 피클을 쓰기 위해서는 항상 바이너리를 설정해줘야한다
+# profile=pickle.load(profile_file) # file에 있는 정보를 profile에 불러오기
+# print(profile)
+# profile_file.close()
+
+# import pickle
+
+# with open("profile.pickle", "rb") as profile_files:
+#     print(pickle.load(profile_files))
+# # close 해줄 필요가 없다
+
+# with open("study.txt", "w", encoding="utf8") as study_file:
+#     study_file.write("파이썬을 배우고 있다")
+
+# with open("study.txt", "r", encoding="utf8") as study_file:
+#     print(study_file.read())
+
+#퀴즈
+# for i in range(1,51):
+#     with open("{}주차 주간보고.txt".format(i), "w", encoding="utf8") as report_file:
+#         report_file.write("--{}주차 주간보고--".format(i))
+#         report_file.write("\n{0:<6}".format("부서: "))
+#         report_file.write("\n{0:<6}".format("이름: "))    
+#         report_file.write("\n{0:<6}".format("업무 요약: "))
 
 
 
